@@ -14,7 +14,6 @@ class MainListAdapter():  PagingDataAdapter<PhotosList, MainListAdapter.ViewHold
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val photoslist = getItem(position)!!
         holder.view.tvName.text = photoslist.author
-     //   holder.view.tvDescriptions.text = holder.itemView.context.resources.getString(R.string.test)
         holder.view.tvDescriptions.text = photoslist.author
         Utility.setImageUrl(holder.view.imgPhotos,photoslist.downloadUrl!!)
         holder.itemView.setOnClickListener{
