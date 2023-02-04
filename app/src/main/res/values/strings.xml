@@ -1,13 +1,4 @@
 <resources>
     <string name="app_name">CodeAssignment</string>
     <string name="ok">OK</string>
-    <string name="test">Many orders may be possible for a particular test case, thus you may
-        return any valid order and output will be 1 if the order of string returned
-        by the function is correct else 0 denoting incorrect string returned.
-        Many orders may be possible for a particular test case, thus you may return
-        any valid order and output will be 1 if the order of string returned by
-        the function is correct else 0 denoting incorrect string returned.
-        Many orders may be possible for a particular test case, thus you may return
-        any valid order and output will be 1 if the order of string returned by
-        the function is correct else 0 denoting incorrect string returned.</string>
 </resources>
