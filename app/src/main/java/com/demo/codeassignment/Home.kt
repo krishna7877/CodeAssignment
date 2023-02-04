@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.codeassignment.base.BaseActivity
 import com.demo.codeassignment.databinding.ActivityHomeBinding
 import com.demo.codeassignment.adapter.MainListAdapter
+import com.demo.codeassignment.common.setVisibility
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -29,11 +30,10 @@ class Home :BaseActivity<ActivityHomeBinding>(),View.OnClickListener {
 
         adapter.addLoadStateListener { loadState ->
             // show empty list
-            if (loadState.refresh is LoadState.Loading || loadState.append is LoadState.Loading) {
-                binding.progressDialog.isVisible = true
-            }
+            if (loadState.refresh is LoadState.Loading || loadState.append is LoadState.Loading)
+                binding.progressDialog.setVisibility(true)
             else {
-                binding.progressDialog.isVisible = false
+                binding.progressDialog.setVisibility(false)
                 // If we have an error, show a toast
                 val errorState = when {
                     loadState.append is LoadState.Error -> loadState.append as LoadState.Error
